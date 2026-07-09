@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>PHOSPHOR — Guide · How this was built</title>
-<meta name="description" content="How the PHOSPHOR terminal site was built with Fable: a CSS CRT overlay, a typed boot sequence, and a real interactive command line." />
+<meta name="description" content="How the PHOSPHOR terminal site was built with Formwork: a CSS CRT overlay, a typed boot sequence, and a real interactive command line." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -40,7 +40,7 @@
   <div class="top"><a class="brand" href="../">◈ PHOSPHOR</a><a href="../">← back to site</a></div>
   <span class="tag">build guide · site 07 of 25</span>
   <h1>A terminal that <em>boots</em>.</h1>
-  <p class="lede">PHOSPHOR is one of 25 sites built by Fable. There's no 3D and no canvas here —
+  <p class="lede">PHOSPHOR is one of 25 sites built by Formwork. There's no 3D and no canvas here —
     just CSS light tricks and a little state machine that makes a web page feel like a CRT.</p>
 
   <h2>the idea</h2>
@@ -72,13 +72,13 @@ fn ? print(fn(args)) : print(`command not found: ${name}`);</code></pre>
 
   <h2>ship it on github pages</h2>
   <pre><code>git init -b main &amp;&amp; git add -A &amp;&amp; git commit -m "ship"
-gh repo create fable-phosphor --public --source=. --push
-gh api --method POST /repos/OWNER/fable-phosphor/pages \
+gh repo create formwork-phosphor --public --source=. --push
+gh api --method POST /repos/OWNER/formwork-phosphor/pages \
   -f 'source[branch]=main' -f 'source[path]=/'</code></pre>
 
   <div class="rule"></div>
   <p>No frameworks, no images — a couple of gradients, one monospace font, and a fifty-line shell.</p>
-  <footer>designed &amp; built by <strong>Fable</strong> · part of a 25-site showcase · <a href="../">return to PHOSPHOR →</a></footer>
+  <footer>designed &amp; built by <strong>Formwork</strong> · part of a 25-site showcase · <a href="../">return to PHOSPHOR →</a></footer>
 </div>
 </body>
 </html>
